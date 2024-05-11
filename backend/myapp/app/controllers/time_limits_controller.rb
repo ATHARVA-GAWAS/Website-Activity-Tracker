@@ -1,0 +1,2 @@
+class TimeLimitsController < ApplicationController
+end

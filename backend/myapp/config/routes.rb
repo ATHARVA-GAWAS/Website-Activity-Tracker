@@ -1,11 +1,17 @@
 Rails.application.routes.draw do
-  devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # Custom routes for user authentication
+  root 'home#index'
+  post '/register', to: 'users#register'
+  post '/login', to: 'sessions#login', as: 'login' # Added comma here
+  delete '/logout', to: 'sessions#logout'
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get "up" => "rails/health#show", as: :rails_health_check
+  # Endpoint for tracking website visits
+  post '/track_website_visit', to: 'website_visits#create'
+  post '/api/activity', to: 'activity#track'
 
-  # Defines the root path route ("/")
-  # root "posts#index"
+  # Endpoint for managing restricted websites
+  resources :restricted_websites, only: [:index, :create, :destroy]
+
+  # Endpoint for managing time limits
+  resources :time_limits, only: [:index, :create, :destroy]
 end

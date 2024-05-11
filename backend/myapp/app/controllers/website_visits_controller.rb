@@ -1,0 +1,2 @@
+class WebsiteVisitsController < ApplicationController
+end
