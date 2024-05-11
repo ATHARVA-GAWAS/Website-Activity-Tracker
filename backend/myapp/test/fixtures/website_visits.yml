@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  url: MyString
+  visit_time: 2024-05-11 11:53:45
+
+two:
+  user: two
+  url: MyString
+  visit_time: 2024-05-11 11:53:45

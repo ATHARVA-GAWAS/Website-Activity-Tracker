@@ -1,0 +1,35 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore yarn lock file
+yarn.lock
+
+# Ignore Ruby gemset files
+.ruby-version
+.ruby-gemset
+
+# Ignore SQLite database file
+db/*.sqlite3
+
+# Ignore log files
+/log/*.log
+
+# Ignore environment configuration files
+/config/*.yml
+/config/*.secret
+
+# Ignore editor/IDE specific files
+.vscode/
+.idea/
+
+# Ignore compiled JavaScript files
+/build/
+
+# Ignore npm debug log files
+npm-debug.log*
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore any other generated or temporary files
+# Add specific files or directories as needed
